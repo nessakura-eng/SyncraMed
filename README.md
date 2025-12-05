@@ -13,14 +13,7 @@ A class project intended to simulate the creation and upkeep of an AI Startup th
 - Gives users a home page with all of their medications listed
 
 ## Test Our App!
-
-
-
-## Installation Guide
-
-1. Install Vite + React here
-2. Install Expo GO here
-
+Download the SyncraMed package v0.0.1 under the "Releases" section and use Vite to set the app up on localhost with the associated port number.
 
 
 
