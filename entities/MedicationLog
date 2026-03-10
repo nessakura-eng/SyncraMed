@@ -1,0 +1,44 @@
+{
+  "name": "MedicationLog",
+  "type": "object",
+  "properties": {
+    "medication_id": {
+      "type": "string",
+      "description": "ID of the medication"
+    },
+    "medication_name": {
+      "type": "string",
+      "description": "Name of the medication for display"
+    },
+    "scheduled_time": {
+      "type": "string",
+      "description": "Scheduled time for the dose"
+    },
+    "taken_at": {
+      "type": "string",
+      "description": "Actual time the medication was taken"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "taken",
+        "skipped",
+        "missed",
+        "pending"
+      ],
+      "default": "pending",
+      "description": "Status of the dose"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the log entry"
+    }
+  },
+  "required": [
+    "medication_id",
+    "medication_name",
+    "date",
+    "status"
+  ]
+}
