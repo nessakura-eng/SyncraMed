@@ -1,0 +1,45 @@
+{
+  "name": "SymptomLog",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of the symptom log"
+    },
+    "symptoms": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of symptoms experienced"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "mild",
+        "moderate",
+        "severe"
+      ],
+      "description": "Overall severity of symptoms"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "great",
+        "good",
+        "okay",
+        "poor",
+        "bad"
+      ],
+      "description": "Overall mood for the day"
+    },
+    "notes": {
+      "type": "string",
+      "description": "General notes for the day"
+    }
+  },
+  "required": [
+    "date"
+  ]
+}
