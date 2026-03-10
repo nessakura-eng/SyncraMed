@@ -1,0 +1,75 @@
+{
+  "name": "Medication",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the medication"
+    },
+    "dosage": {
+      "type": "string",
+      "description": "Dosage amount and unit (e.g. 500mg)"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": [
+        "once_daily",
+        "twice_daily",
+        "three_times_daily",
+        "four_times_daily",
+        "as_needed",
+        "weekly",
+        "biweekly",
+        "monthly"
+      ],
+      "description": "How often the medication is taken"
+    },
+    "reminder_times": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Times of day to take medication (e.g. ['08:00', '20:00'])"
+    },
+    "prescribing_doctor": {
+      "type": "string",
+      "description": "Name of prescribing doctor"
+    },
+    "pharmacy_id": {
+      "type": "string",
+      "description": "Linked pharmacy ID"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "When the medication was started"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "When the medication ends (if applicable)"
+    },
+    "refills_remaining": {
+      "type": "number",
+      "description": "Number of refills remaining"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the medication"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether the medication is currently active"
+    },
+    "color": {
+      "type": "string",
+      "description": "Color tag for the medication"
+    }
+  },
+  "required": [
+    "name",
+    "dosage",
+    "frequency"
+  ]
+}
