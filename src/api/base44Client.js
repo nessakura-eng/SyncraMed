@@ -10,5 +10,5 @@ export const base44 = createClient({
   functionsVersion,
   serverUrl: '',
   requiresAuth: false,
-  appBaseUrl
+  appBaseUrl: import.meta.env.VITE_BASE44_APP_BASE_URL
 });
